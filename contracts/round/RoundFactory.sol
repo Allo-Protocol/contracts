@@ -29,6 +29,14 @@ contract RoundFactory is OwnableUpgradeable {
   /// @notice Address of the RoundImplementation contract
   address public roundImplementation;
 
+  /// @notice Unused storage slot to allow for upgrade to new variables
+  /// @custom:oz-renamed-from protocolTreasury
+  address payable public _unusedSlot1;
+
+  /// @notice Unused storage slot to allow for upgrade to new variables
+  /// @custom:oz-renamed-from protocolFeePercentage
+  uint8 public _unusedSlot2;
+
   /// @notice Address of the Allo settings contract
   address public alloSettings;
 
